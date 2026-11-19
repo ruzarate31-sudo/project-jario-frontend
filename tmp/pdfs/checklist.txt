@@ -1,0 +1,148 @@
+--- PAGE 1 ---
+Aplicación del Front-End
+Etapa 1. Etiquetado y JSX + Conectar una
+API third-party
+Criterios para denegar la revisión del proyecto:
+El pull request (solicitud de extracción) para la revisión no fue enviada.
+Los datos de la API no se cargan ni aparecen.
+Hay errores al construir o ejecutar el proyecto.
+La parte del front-end de la aplicación no se despliega en el servidor.
+Criterios de desempeño
+Etiquetado y JSX
+El proyecto está adaptado a diferentes resoluciones de pantalla y se ve
+correctamente en todas las resoluciones intermedias. No hay desplazamiento
+horizontal en resoluciones de 320px o superiores. La barra de desplazamiento
+no puede ocultarse utilizando la declaración overflow: hidden . / 7.4
+La navegación entre páginas y los enlaces a recursos externos funcionan
+correctamente: no hay enlaces rotos o que lleven a un callejón sin salida en la
+página y los enlaces externos se abren en una nueva pestaña. Se puede
+acceder a todas las páginas del proyecto y no hay bloques ocultos.
+/ 7.26
+Se utilizan botones, formularios y ventanas modales del conjunto de
+herramientas de la interfaz del usuario.
+/ 7.26
+Las clases reciben el nombre de acuerdo con las especificaciones de BEM.
+/
+3.63
+Se utiliza HTML semántico, es decir, se utilizan etiquetas semánticas. Todos
+los elementos se utilizan correctamente (por ejemplo, un párrafo debe ser un
+párrafo, una lista debe ser una lista). La estructura de árbol del DOM no
+consiste solo en contenedores <div> . / 3.63
+Aplicación del Front-End 1
+--- PAGE 2 ---
+Se elige el enfoque correcto para posicionar los elementos, y se describe
+utilizando la sintaxis correcta. Por ejemplo, al posicionar un elemento de forma
+absoluta, su bloque padre se posiciona de forma relativa.
+/ 3.63
+La disposición de los elementos se realiza mediante un diseño flex o grid . /
+3.63
+Los archivos infraestructurales del proyecto se crean con CRA.
+/ 3.63
+El etiquetado se ha transferido a JSX
+El etiquetado se incluye dentro de .
+( ) / 3.63
+El etiquetado se ha trasladado a los componentes correspondientes. /
+3.63
+Tu proyecto contiene las siguientes carpetas: / 3.63
+Una carpeta con archivos JS y CSS para los componentes.
+components
+Una carpeta .
+fonts
+No hay advertencias.
+/ 3.63
+React y conectar una API third-party
+Componentes de React:
+Los hooks no se utilizan dentro de las sentencias condicionales. / 3.63
+Los hooks se llaman en la función main de un componente.
+/ 3.63
+Para los componentes de clase, los efectos se describen dentro de los
+métodos del ciclo de vida del componente.
+/ 3.63
+Solicitudes asíncronas de la API
+/ 3.63
+Las solicitudes pueden realizarse a través de la API Fetch o utilizando
+XMLHttpRequest. No se utilizan librerías third-party (como axios o jQuery).
+Las solicitudes de la API están contenidas en un archivo separado.
+La cadena para procesar promises termina con un bloque .
+catch()
+El primer controlador devuelve .
+then() res.json
+El proyecto cumple con los siguientes requisitos de estilo del código:
+/ 3.63
+Aplicación del Front-End 2
+--- PAGE 3 ---
+Los nombres de los hooks personalizados comienzan con .
+use
+No se utilizan librerías third-party de JavaScript a menos que sea
+absolutamente necesario. Si se conectan librerías third-party, consideramos
+que están bien utilizadas. / 3.63
+Búsqueda de datos
+/ 3.63
+El preloader es visible y gira durante la ejecución de la solicitud.
+Una vez que el formulario de búsqueda se ha enviado correctamente,
+aparece un bloque con los resultados. Si no se ha encontrado nada,
+aparece el mensaje "No se ha encontrado nada".
+Se muestran 3 elementos en el bloque de resultados. Al hacer clic en el
+botón "Mostrar más" se renderizarán los siguientes 3 elementos.
+Mejores procedimientos
+Etiquetado y JSX
+El diseño reutiliza componentes siempre que sea posible.
+/ 1.25
+Las fuentes están conectadas con .
+@font-face / 1.12
+Los iconos se exportan en formato SVG. / 1.12
+Los elementos del formulario deben ser resaltados cuando se enfocan.
+/ 1.15
+El formulario debe tener marcadores de posición, y hay propiedades
+requeridas para los campos.
+/ 1.25
+Está prohibido utilizar .
+reset.css / 1.12
+React y conectar una API third-party
+El estado inicial de las variables de estado contiene el tipo de datos correcto.
+/ 1.25
+Las solicitudes de la API se describen dentro del componente App . / 1.25
+No se pierden fragmentos de memoria cuando se cuelgan los controladores.
+Todos los controladores añadidos con addEventListener se eliminan cuando
+se desmonta el componente.
+/ 1.25
+Aplicación del Front-End 3
+--- PAGE 4 ---
+Manejo de errores de la API
+/ 1.25
+El usuario recibe un mensaje en caso de error.
+Los valores no variables (constantes hardcoded) se nombran en mayúsculas y
+se almacenan en un archivo de configuración separado.
+/ 1.25
+Si estás utilizando ventanas emergentes, entonces corrige la funcionalidad de
+apertura y cierre que se implementa. Las ventanas emergentes pueden
+cerrarse haciendo clic en el botón de la cruz, en la superposición (overlay) o
+pulsando la tecla ESC.
+/ 1.25
+Recomendaciones
+Etiquetado y JSX
+Las fuentes del sistema se conectan como alternativas a cada una de tus
+fuentes.
+/ 0.83
+Las imágenes tienen un atributo que contiene los valores adecuados.
+alt /
+0.83
+Se han optimizado las imágenes ráster (mapa de bits) y vectoriales.
+/ 0.83
+React y conectar una API third-party
+Para los enlaces internos de la aplicación, se utilizan componentes de la
+librería react-router . / 0.83
+Se utilizan bloques semánticamente correctos para los componentes. No se
+utilizan etiquetas ni otras etiquetas HTML innecesarias para los
+<div>
+componentes que estan formados por bloques de un solo nivel.
+/ 0.83
+El código está claro y es fácil de entender:
+/ 0.85
+El código es legible y está estructurado con claridad. Algunas partes del
+código están explicadas con comentarios cuando es necesario.
+No hay código extra: por ejemplo, se declara una variable pero no se
+utiliza, o hay algún tipo de lógica redundante.
+El código se formatea de la misma manera, se respeta la jerarquía de
+indentación.
+Aplicación del Front-End 4
