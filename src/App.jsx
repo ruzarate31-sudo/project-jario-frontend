@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { searchTatoebaSentences } from "./utils/tatoebaApi";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -9,11 +9,18 @@ import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import "./App.css";
 
 function App() {
+  const { pathname } = useLocation();
   const [word, setWord] = useState("");
   const [sentences, setSentences] = useState([]);
   const [visibleCount, setVisibleCount] = useState(3);
   const [status, setStatus] = useState("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    const canonicalUrl = new URL(pathname, "https://spanishacademyjario.com/").href;
+    document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonicalUrl);
+    document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonicalUrl);
+  }, [pathname]);
 
   async function handleSearch(event) {
     event.preventDefault();

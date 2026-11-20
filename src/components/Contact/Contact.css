@@ -63,6 +63,27 @@
   text-decoration: underline;
 }
 
+.contact__whatsapp-link {
+  display: inline-flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.contact__whatsapp-link:hover {
+  transform: translateY(-2px);
+  background: #125b39;
+}
+
 .contact__social-link {
   display: inline-flex;
   height: 48px;
@@ -176,7 +197,8 @@
 }
 
 .contact__details a:focus-visible,
-.contact__social-link:focus-visible {
+.contact__social-link:focus-visible,
+.contact__whatsapp-link:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
@@ -210,6 +232,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .contact__social-link,
+.contact__whatsapp-link,
   .contact__submit {
     transition: none;
   }
