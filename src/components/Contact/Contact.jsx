@@ -1,7 +1,12 @@
 import './Contact.css'
 
-const contactEmail = 'example.email@gmail.com'
-const contactPhone = '+57 333 4444 5555'
+const contactEmail = 'hello@spanishacademyjario.com'
+const contactPhone = '+57 312 467 4541'
+const whatsappNumber = '573124674541'
+const whatsappMessage = encodeURIComponent(
+  'Hi! I would like more information about your Spanish classes and would like to book a free trial lesson.',
+)
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
 
 function Contact() {
   function handleSubmit(event) {
@@ -30,8 +35,20 @@ function Contact() {
 
         <address className="contact__details">
           <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-          <a href="tel:+5733344445555">{contactPhone}</a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer">
+            WhatsApp: {contactPhone}
+          </a>
         </address>
+
+        <a
+          className="contact__whatsapp-link"
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat with Spanish Academy JARIO on WhatsApp"
+        >
+          Chat with us on WhatsApp <span aria-hidden="true">↗</span>
+        </a>
 
         <a
           className="contact__social-link"

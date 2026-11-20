@@ -25,6 +25,25 @@ La ruta base de Vite y React Router está configurada para GitHub Pages. El fluj
 también genera una página de respaldo para que `/vocabulary` y la ruta 404
 funcionen al abrirse directamente.
 
+### Dominio personalizado
+
+El dominio previsto es `spanishacademyjario.com`. En GitHub abre **Settings →
+Pages** y establece ese dominio en **Custom domain** antes de cambiar DNS. Esta
+compilación usa `base: '/'` para servir los recursos desde el dominio raíz. Con
+la publicación mediante GitHub Actions, el dominio se administra desde Settings
+→ Pages y no requiere un archivo `CNAME` en el proyecto.
+
+Los nameservers consultados corresponden a Squarespace. Para conectar el
+dominio raíz con GitHub Pages, reemplaza los registros web actuales de Squarespace
+por cuatro registros A para `@` con
+`185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`, y
+reemplaza el CNAME actual de `www` por uno que apunte a
+`ruzarate31-sudo.github.io`. Conserva los
+registros de correo existentes: actualmente el MX apunta a Google (`smtp.google.com`)
+y el SPF incluye Google. No reemplaces ni borres esos registros al cambiar los
+registros web. Después de que DNS se propague, activa **Enforce HTTPS** en
+Settings → Pages.
+
 ## Comandos disponibles
 
 - `npm run dev`: inicia el servidor de desarrollo de Vite.
